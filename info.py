@@ -20,7 +20,7 @@ API_ID = int(environ.get('API_ID', '29450452'))
 API_HASH = environ.get('API_HASH', '54759945ff88b52777eec9a455944d31')
 BOT_TOKEN = environ.get('BOT_TOKEN', "7693803634:AAFIWfW8gfzMYv-G5-I9hAnge1mYFVkspio")
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002101130967'))
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1759982322').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5032034594').split()]
 
 # Bot Settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
@@ -33,7 +33,7 @@ SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/15c1ad448dfe472a5
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else ADMINS
-AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1001889509068')) if id_pattern.search(environ.get('AUTH_CHANNEL', '')) else None
+AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-100233236188')) if id_pattern.search(environ.get('AUTH_CHANNEL', '')) else None
 REQST_CHANNEL = int(environ.get('REQST_CHANNEL_ID', '0')) if id_pattern.search(environ.get('REQST_CHANNEL_ID', '')) else None
 SUPPORT_CHAT_ID = int(environ.get('SUPPORT_CHAT_ID', '0')) if id_pattern.search(environ.get('SUPPORT_CHAT_ID', '')) else None
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
