@@ -4,6 +4,7 @@ from Script import script
 
 id_pattern = re.compile(r'^.\d+$')
 
+
 def is_enabled(value, default):
     if value.lower() in ["true", "yes", "1", "enable", "y"]:
         return True
@@ -12,7 +13,8 @@ def is_enabled(value, default):
     else:
         return default
 
-# Bot information
+
+# Bot Info
 SESSION = environ.get('SESSION', 'TheBlackBot')
 API_ID = int(environ.get('API_ID', '29450452'))
 API_HASH = environ.get('API_HASH', '54759945ff88b52777eec9a455944d31')
@@ -20,7 +22,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "")
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002101130967'))
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1759982322').split()]
 
-# Bot settings
+# Bot Settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
 PICS = environ.get('PICS', 'https://graph.org/file/517bc12dd5c1347df10f6.jpg').split()
 NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/b69af2db776e4e85d21ec.jpg")
@@ -56,7 +58,7 @@ TUTORIAL = environ.get('TUTORIAL', '')
 VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', '')
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '')  # No @
 
-# Shortlink Info
+# Shortlink
 SHORTLINK_MODE = is_enabled(environ.get('SHORTLINK_MODE', "True"), True)
 SHORTLINK_URL = environ.get('SHORTLINK_URL', '')
 SHORTLINK_API = environ.get('SHORTLINK_API', '')
@@ -120,3 +122,6 @@ PORT = environ.get("PORT", "8080")
 MSG_ALRT = environ.get('MSG_ALRT', '👀 How Are You Buddy ❤️‍🩹')
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", f"{script.CAPTION}")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "")
+
+# ✅ Missing Template Added
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>🌟 {title}</b>\n\n🎬 <b>Genre:</b> {genres}\n🗓 <b>Release:</b> {year}\n⭐ <b>Rating:</b> {rating}/10\n📖 <b>Plot:</b> {plot}")
