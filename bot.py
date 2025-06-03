@@ -1,3 +1,6 @@
+import os
+
+PORT = int(os.environ.get("PORT", 8080))  # fallback to 8080 if PORT is not set
 import logging
 
 # Define log format and level
