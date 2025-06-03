@@ -59,8 +59,7 @@ from bot.clients import initialize_clients
 ppath = "plugins/*.py"
 files = glob.glob(ppath)
 TheBlackBot.start()
-loop = asyncio.new_event_loop()
-asyncio.set_event_loop(loop)
+loop = asyncio.get_event_loop()
 
 
 async def start():
