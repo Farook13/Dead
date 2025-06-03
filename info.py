@@ -120,15 +120,3 @@ PORT = environ.get("PORT", "8080")
 MSG_ALRT = environ.get('MSG_ALRT', '👀 How Are You Buddy ❤️‍🩹')
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", f"{script.CAPTION}")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "")
-
-✅ What's Fixed:
-
-Removed duplicate CLONE_MODE, CLONE_DATABASE_URI, PUBLIC_FILE_CHANNEL, and VERIFY_TUTORIAL.
-
-Ensured all values fall back gracefully using default values or empty strings.
-
-Used consistent is_enabled() for boolean parsing.
-
-
-Let me know if you want this exported to a .py file or refactored into sections like filterbot/config.py.
-
