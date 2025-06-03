@@ -1,3 +1,13 @@
+import logging
+
+# Define log format and level
+logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
+
+LOG_STR = "Bot started successfully!"  # ✅ Fix added
+
+async def start():
+    # ... your initialization code ...
+    logging.info(LOG_STR)  # ✅ Now saf
 import threading
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
