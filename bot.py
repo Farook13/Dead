@@ -1,10 +1,18 @@
-# Credit @TheBlackXYZ.
-# Please Don't remove credit.
-# TheBlackXYZBotz Forever !
-# Thanks You For Help Us In This Amazing Creativity 
-# Thanks You For Giving Me Credit @TheBlackXYZBotz
-# For Any ERROR Please Contact Me -> Telegram ->@TheBlackXYZBotz & Insta @TheBlackXYZ
-# Please Love & Support 💗💗🙏
+import threading
+from http.server import BaseHTTPRequestHandler, HTTPServer
+
+class HealthCheckHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b'Bot is running!')
+
+def run_health_server():
+    server = HTTPServer(('0.0.0.0', 8000), HealthCheckHandler)
+    server.serve_forever()
+
+# Start the health server in a thread
+threading.Thread(target=run_health_server, daemon=True).start()
 
 import sys, glob, importlib, logging, logging.config, pytz, asyncio
 from pathlib import Path
