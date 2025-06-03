@@ -36,7 +36,7 @@ class HealthCheckHandler(BaseHTTPRequestHandler):
         self.wfile.write(b'Bot is running!')
 
 def run_health_server():
-    server = HTTPServer(('0.0.0.0', 8000), HealthCheckHandler)
+    server = HTTPServer(('0.0.0.0', 8085), HealthCheckHandler)
     server.serve_forever()
 
 Thread(target=run_health_server, daemon=True).start()
